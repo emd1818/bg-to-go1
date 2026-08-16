@@ -37,20 +37,167 @@ const REGIONS = [
     icon: Mountain,
     pois: [
       {
-        name: "Природен парк Витоша",
-        blurb:
-          "Билкови пътеки и скални венци, до които се стига с трамвай от центъра на София.",
+            "name": "Egrekadren",
+            "description": "Туристически комплекс с развлечения",
+            "type": "Tourist Attraction",
+            "address": "Близо до София, България",
+            "website": "https://egrekadren.alle.bg/"
       },
       {
-        name: "Боянска църква",
-        blurb:
-          "Средновековни стенописи от XIII век, включени в списъка на ЮНЕСКО.",
+            "name": "Zhivata Voda",
+            "description": "Природна вода с лечебни свойства",
+            "type": "Natural Wonder",
+            "address": "Близо до София, България",
+            "website": "https://www.peika.bg/statia/Mestnost_Zhivata_voda_i_zmeyskata_cheshma_kray_Bosnek"
       },
       {
-        name: "Драгалевски манастир",
-        blurb: "Тих двор в полите на планината, любимо място за неделна разходка.",
+            "name": "Lyulin Mountain",
+            "description": "Планина с туристически маршрути",
+            "type": "Mountain",
+            "address": "Близо до София, България",
+            "website": "https://profit.bg/pyteshestviq/na-krachka-ot-stolitsata-pet-interesni-mesta-v-lyulin-planina/"
       },
-    ],
+      {
+            "name": "Vitosha Mountain",
+            "description": "Планина с хижи и маршрути",
+            "type": "Mountain",
+            "address": "Близо до София, България",
+            "website": "http://park-vitosha.org/"
+      },
+      {
+            "name": "Vladaya",
+            "description": "Исторически град",
+            "type": "Historical Site",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/maps/place/%D0%92%D0%BB%D0%B0%D0%B4%D0%B0%D1%8F/"
+      },
+      {
+            "name": "Aqua Bankya",
+            "description": "Аквапарк и спа курорт",
+            "type": "Water Park",
+            "address": "Банкя, България",
+            "website": "https://aquabankya.bg/"
+      },
+      {
+            "name": "Maison's Bar & Dinner",
+            "description": "Ресторант с традиционна кухня",
+            "type": "Restaurant",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/maps/place/Maison's+Bar+%26+Dinner/"
+      },
+      {
+            "name": "Saffron Restaurant",
+            "description": "Ресторант с международна кухня",
+            "type": "Restaurant",
+            "address": "Близо до София, България",
+            "website": "https://saffron-bg.com/"
+      },
+      {
+            "name": "Pizza Lachoni",
+            "description": "Пицария с традиционни рецепти",
+            "type": "Restaurant",
+            "address": "Близо до София, България",
+            "website": "https://pizza-lachoni.com/"
+      },
+      {
+            "name": "Lobosh",
+            "description": "Ресторант с българска кухня",
+            "type": "Restaurant",
+            "address": "Близо до София, България",
+            "website": "https://lobosh.bg/"
+      },
+      {
+            "name": "Kovachevtsi",
+            "description": "Традиционно село с туризъм",
+            "type": "Village",
+            "address": "Близо до София, България",
+            "website": "https://kovachevtsi.com/"
+      },
+      {
+            "name": "Belogradchik Fortress",
+            "description": "Историческа крепост",
+            "type": "Historical Site",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/search?q=%D0%BA%D1%80%D0%B5%D0%BF%D0%BE%D1%81%D1%82+%D0%B1%D0%B5%D0%BB%D0%B8%D0%B3%D1%80%D0%B0%D0%B4"
+      },
+      {
+            "name": "Pod Oreha",
+            "description": "Природна забележителност",
+            "type": "Natural Wonder",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/search?sca_esv=45ade08aecea71dd&q=%D0%9F%D0%BE%D0%B4+%D0%9E%D1%80%D0%B5%D1%85%D0%B0"
+      },
+      {
+            "name": "Kladnica Museum",
+            "description": "Музей с исторически експонати",
+            "type": "Museum",
+            "address": "Близо до София, България",
+            "website": "https://kladnica.com/story/1745"
+      },
+      {
+            "name": "Shishkovtsi Museum",
+            "description": "Музей на къщата",
+            "type": "Museum",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/search?q=%D0%BA%D1%8A%D1%89%D0%B0+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9+%D1%88%D0%B8%D1%88%D0%BA%D0%BE%D0%B2%D1%86%D0%B8"
+      },
+      {
+            "name": "Boyana Film Studios",
+            "description": "Кино студия и туристически обект",
+            "type": "Tourist Attraction",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/maps/place/%D0%A1%D0%BD%D0%B8%D0%BC%D0%B0%D1%87%D0%BD%D0%B0+%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%BA%D0%B0"
+      },
+      {
+            "name": "Taralejovo",
+            "description": "Традиционно село",
+            "type": "Village",
+            "address": "Близо до София, България",
+            "website": "https://taralejovo.com/"
+      },
+      {
+            "name": "Yaz Dyakovo",
+            "description": "Природна забележителност",
+            "type": "Natural Wonder",
+            "address": "Близо до София, България",
+            "website": "https://www.google.com/maps/place/%D0%AF%D0%B7%D0%BE%D0%B2%D0%B8%D1%80+%D0%94%D1%8F%D0%BA%D0%BE%D0%B2%D0%BE/"
+      },
+      {
+            "name": "The Castle Official",
+            "description": "Туристически обект",
+            "type": "Tourist Attraction",
+            "address": "Близо до София, България",
+            "website": "https://www.thecastleofficial.com/"
+      },
+      {
+            "name": "Laterra",
+            "description": "Туристически комплекс",
+            "type": "Tourist Attraction",
+            "address": "Близо до София, България",
+            "website": "https://laterra.bg/"
+      },
+      {
+            "name": "Balaban Wine",
+            "description": "Винарна с дегустации",
+            "type": "Winery",
+            "address": "Близо до София, България",
+            "website": "https://balaban.wine/"
+      },
+      {
+            "name": "Probo Inica",
+            "description": "Туристически обект",
+            "type": "Tourist Attraction",
+            "address": "Близо до София, България",
+            "website": "https://proboinica.com/"
+      },
+      {
+            "name": "Babino Selo",
+            "description": "Традиционно село",
+            "type": "Village",
+            "address": "Близо до София, България",
+            "website": "https://babino-selo.com/"
+      }
+],
     stays: [
       {
             "name": "Hizha Radio",
@@ -236,18 +383,146 @@ const REGIONS = [
     icon: TreePine,
     pois: [
       {
-        name: "Рилски манастир",
-        blurb: "Най-големият манастир в страната, забележителност от значението на ЮНЕСКО.",
+            "name": "Рилски манастир",
+            "description": "Исторически манастир с уникална архитектура",
+            "type": "Religious Site",
+            "address": "Рилски манастир, България",
+            "website": "https://www.saintivanrilski.com/"
       },
       {
-        name: "Седемте рилски езера",
-        blurb: "Верига ледникови езера, свързани с еднодневен преход от хижа Рилски езера.",
+            "name": "Национален музей Рила",
+            "description": "Музей с експонати от Рилския манастир",
+            "type": "Museum",
+            "address": "Рила, България",
+            "website": "https://www.nsa.bg/bg/page,778"
       },
       {
-        name: "Връх Вихрен",
-        blurb: "Вторият по височина връх в България, изходна точка от Бъндеришка хижа.",
+            "name": "Връх Фенерка",
+            "description": "Висок връх с панорамна гледка",
+            "type": "Mountain Peak",
+            "address": "Рила, България",
+            "website": "https://www.google.com/search?q=%D0%B2%D1%80%D1%8A%D1%85+%D1%84%D0%B5%D0%BD%D0%B5%D1%80%D0%BA%D0%B0"
       },
-    ],
+      {
+            "name": "Минерален плаж Баня",
+            "description": "Минерални води и лечебни басейни",
+            "type": "Spa",
+            "address": "Баня, България",
+            "website": "https://razlog.bg/news/item/7559-lyubimiyat-mineralen-plazh-na-malki-i-golemi-v-selo-banya-otvori-vrati"
+      },
+      {
+            "name": "Юндола",
+            "description": "Планински курорт с различни активности",
+            "type": "Ski Resort",
+            "address": "Юндола, България",
+            "website": "https://yundola.andela-bg.com/"
+      },
+      {
+            "name": "Езерец",
+            "description": "Планински курорт и природна резервация",
+            "type": "Mountain Resort",
+            "address": "Езерец, България",
+            "website": "https://ezeretz.com/"
+      },
+      {
+            "name": "Свети Никола край Добринище",
+            "description": "Исторически храм с красива гледка",
+            "type": "Religious Site",
+            "address": "Добринище, България",
+            "website": "https://svetogled.com/mestnost-sveti-nikola-krai-dobrinishte/"
+      },
+      {
+            "name": "Резервата Юлен",
+            "description": "Природна резервация с редки видове",
+            "type": "Nature Reserve",
+            "address": "Рила, България",
+            "website": "https://www.google.com/search?q=%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%B0%D1%82+%E2%80%9C%D0%AE%D0%BB%D0%B5%D0%BD%E2%80%9D"
+      },
+      {
+            "name": "Хераклея Синтика",
+            "description": "Древноримски град с археологически находки",
+            "type": "Archaeological Site",
+            "address": "Рила, България",
+            "website": "https://pirinsko.com/misteriozniqt-grad-herakleq-sintika-e-edno-ot-naj-golemite-otkritiq-v-bylgariq-132635/"
+      },
+      {
+            "name": "Хижа Вада Рила",
+            "description": "Планинска хижа с съоръжения",
+            "type": "Mountain Hut",
+            "address": "Рила, България",
+            "website": "https://planinari.com/hija-vada-rila/"
+      },
+      {
+            "name": "Беласитса",
+            "description": "Планинска местност с красиви гледки",
+            "type": "Mountain",
+            "address": "Рила, България",
+            "website": "https://belasitsa.bg/"
+      },
+      {
+            "name": "Хижа Беговица",
+            "description": "Планинска хижа в Каменица",
+            "type": "Mountain Hut",
+            "address": "Каменица, България",
+            "website": "https://www.btsbg.org/hizhi/hizha-begovica-kamenica"
+      },
+      {
+            "name": "Granchar Chalet",
+            "description": "Планински шале с модерни съоръжения",
+            "type": "Mountain Chalet",
+            "address": "Рила, България",
+            "website": "https://granchar-chalet.com/"
+      },
+      {
+            "name": "Хижа Яворов",
+            "description": "Планинска хижа с традиционен стил",
+            "type": "Mountain Hut",
+            "address": "Банско, България",
+            "website": "https://www.yavorov.hija.bg/"
+      },
+      {
+            "name": "Хижа Иван Вазов",
+            "description": "Планинска хижа с исторически значение",
+            "type": "Mountain Hut",
+            "address": "Рила, България",
+            "website": "https://gowhere.bg/mesta/planini/hiza-ivan-vazov/"
+      },
+      {
+            "name": "Хижа Малиовица",
+            "description": "Планинска хижа с панорамна гледка",
+            "type": "Mountain Hut",
+            "address": "Рила, България",
+            "website": "https://www.malyovitsa.hija.bg/"
+      },
+      {
+            "name": "Хижа Бандеритса",
+            "description": "Планинска хижа в Рила",
+            "type": "Mountain Hut",
+            "address": "Рила, България",
+            "website": "https://www.banderitsa.hija.bg/"
+      },
+      {
+            "name": "Rila Rock",
+            "description": "Скални образувания с туристически маршрути",
+            "type": "Natural Wonder",
+            "address": "Рила, България",
+            "website": "https://www.google.com/search?q=rila+rock"
+      },
+      {
+            "name": "Добринище",
+            "description": "Историческо село с минерални води",
+            "type": "Village",
+            "address": "Добринище, България",
+            "website": "https://visit-dobrinishte.bg/"
+      },
+      {
+            "name": "Банско",
+            "description": "Известен ски курорт и туристически град",
+            "type": "Ski Resort",
+            "address": "Банско, България",
+            "website": "https://propertiesinbansko.com/"
+      }
+],
     stays: [
       {
             "name": "Belchin Spring",
@@ -440,18 +715,139 @@ const REGIONS = [
     icon: Landmark,
     pois: [
       {
-        name: "Дяволското гърло",
-        blurb: "Пещера с подземен водопад, една от най-посещаваните в Родопите.",
+            "name": "Врах Сютка",
+            "description": "Висок връх в Родопите с панорамна гледка",
+            "type": "Mountain Peak",
+            "address": "Родопи, България",
+            "website": "https://www.google.com/search?q=%D0%B2%D1%80%D1%8A%D1%85+%D1%81%D1%8E%D1%82%D0%BA%D0%B0"
       },
       {
-        name: "Перперикон",
-        blurb: "Скално светилище с история, простираща се хиляди години назад.",
+            "name": "Триград ущелие",
+            "description": "Красиво ущелие с река и пещери",
+            "type": "Natural Wonder",
+            "address": "Триград, България",
+            "website": "http://www.trigrad.free.bg/"
       },
       {
-        name: "Широка лъка",
-        blurb: "Архитектурен резерват, известен с автентичните родопски къщи.",
+            "name": "Храм Св. Димитър Солунски",
+            "description": "Исторически храм в Пловдив",
+            "type": "Religious Site",
+            "address": "Пловдив, България",
+            "website": "http://www.plovdivskamitropolia.bg/hramove/690-hram-sv-dimitar-solunski.html"
       },
-    ],
+      {
+            "name": "Белите брези",
+            "description": "Туристически комплекс в Родопите",
+            "type": "Tourist Complex",
+            "address": "Родопи, България",
+            "website": "https://www.google.com/search?q=%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8+%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81+%22%D0%91%D0%B5%D0%BB%D0%B8%D1%82%D0%B5+%D0%B1%D1%80%D0%B5%D0%B7%D0%B8"
+      },
+      {
+            "name": "Село Гела",
+            "description": "Традиционно село в Родопите",
+            "type": "Village",
+            "address": "Гела, България",
+            "website": "https://www.google.com/search?q=%D1%81%D0%B5%D0%BB%D0%BE+%D0%B3%D0%B5%D0%BB%D0%B0"
+      },
+      {
+            "name": "Най-чистия въздух в света",
+            "description": "Място с изключително чист въздух",
+            "type": "Natural Phenomenon",
+            "address": "Родопи, България",
+            "website": "https://izumitelno.com/naj-chistiyat-vazduh-na-planetata-e-nad-edin-prekrasen-balgarski-grad/"
+      },
+      {
+            "name": "Зеолитни находища",
+            "description": "Природни минерални находища в Белите пласт",
+            "type": "Geological Site",
+            "address": "Родопи, България",
+            "website": "https://www.google.com/search?q=%D0%9D%D0%B0%D0%B9-%D0%B3%D0%BE%D0%BB%D1%8F%D0%BC%D0%BE%D1%82%D0%BE+%D0%B2+%D1%81%D0%B2%D0%B5%D1%82%D0%B0"
+      },
+      {
+            "name": "Село Жерка",
+            "description": "Забравено село с уникална история",
+            "type": "Village",
+            "address": "Жерка, България",
+            "website": "https://preotkrii.bg/selo-zherka-zabravenata-prikazka-v-rodopite/"
+      },
+      {
+            "name": "Solishta",
+            "description": "Малко село в Родопите",
+            "type": "Village",
+            "address": "Солишта, България",
+            "website": "https://www.google.com/maps/place/4711+Solishta/"
+      },
+      {
+            "name": "Пътешествия в Родопите",
+            "description": "Туристически маршрути и разходки",
+            "type": "Hiking Trail",
+            "address": "Родопи, България",
+            "website": "https://offroad-bulgaria.com/forum/"
+      },
+      {
+            "name": "Лекувай",
+            "description": "Спа и лечебен комплекс",
+            "type": "Spa Resort",
+            "address": "Родопи, България",
+            "website": "https://lekuvai.bg/104267/"
+      },
+      {
+            "name": "Rancho Divi Rodopi",
+            "description": "Конна база и туристически комплекс",
+            "type": "Adventure Park",
+            "address": "Родопи, България",
+            "website": "https://ranchodivirodopi.com/"
+      },
+      {
+            "name": "WWOOF Rhodopes",
+            "description": "Еко-ферми и органично земеделие",
+            "type": "Eco Farm",
+            "address": "Родопи, България",
+            "website": "https://wwoofindependents.org/en/host/44978/"
+      },
+      {
+            "name": "Mogila Escape",
+            "description": "Еко-туризъм и приключенски активности",
+            "type": "Adventure",
+            "address": "Родопи, България",
+            "website": "https://www.facebook.com/p/Mogila-Escape-100084806720335/"
+      },
+      {
+            "name": "Under The Stars",
+            "description": "Глемпинг и природни преживявания",
+            "type": "Glamping",
+            "address": "Родопи, България",
+            "website": "https://www.underthestars.bg/"
+      },
+      {
+            "name": "Akademik Hut",
+            "description": "Планинска хижа за туристи",
+            "type": "Mountain Hut",
+            "address": "Родопи, България",
+            "website": "https://www.facebook.com/hijaakademik/"
+      },
+      {
+            "name": "Tutz Panorama",
+            "description": "Панорамна площадка с гледка",
+            "type": "Viewpoint",
+            "address": "Пампоров, България",
+            "website": "https://uos-ead.eu/%D1%82%D1%83%D1%86-%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D0%B0-%D0%BA-%D0%BA-%D0%BF%D0%B0%D0%BC%D0%BF%D0%BE%D1%80%D0%BE%D0%B2%D0%BE"
+      },
+      {
+            "name": "Ekorai Kartola",
+            "description": "Еко-туризъм и природни активности",
+            "type": "Eco Tourism",
+            "address": "Родопи, България",
+            "website": "https://www.facebook.com/ekorai.kartola/"
+      },
+      {
+            "name": "Mountain Escape",
+            "description": "Планински приключения и разходки",
+            "type": "Adventure",
+            "address": "Родопи, България",
+            "website": "https://www.facebook.com/mauntainn/"
+      }
+],
     stays: [
       {
             "name": "Romantika Hotel",
@@ -651,18 +1047,76 @@ const REGIONS = [
     icon: Waves,
     pois: [
       {
-        name: "Старият град на Несебър",
-        blurb: "Полуостровен град с антични и средновековни църкви, обект на ЮНЕСКО.",
+            "name": "Пляжи на българското Черноморие",
+            "description": "Красиви пляжи и морски брегове",
+            "type": "Beach",
+            "address": "Черноморие, България",
+            "website": "https://littlebg.com/10-rais%D0%BAi-plaja-po-bulgarskoto-chernomorie/"
       },
       {
-        name: "Созопол",
-        blurb: "Рибарско градче с дървени къщи и тесни калдъръмени улици.",
+            "name": "Невероятни места за снимки",
+            "description": "Интересни места за фотография",
+            "type": "Photography Spot",
+            "address": "Черноморие, България",
+            "website": "https://littlebg.com/8-neveroqtni-mesta-kudeto-da-se-pechete-sami/"
       },
       {
-        name: "Нос Калиакра",
-        blurb: "Скалист нос над морето с крепостни останки и легенди.",
+            "name": "Национален музей Варна",
+            "description": "Музей с богата история и артефакти",
+            "type": "Museum",
+            "address": "Варна, България",
+            "website": "https://www.nsa.bg/bg/page,777"
       },
-    ],
+      {
+            "name": "Езерец пляж",
+            "description": "Красив пляж в община Шабла",
+            "type": "Beach",
+            "address": "Езерец, България",
+            "website": "https://beaches.bg/destination/%D0%BE%D0%B1%D1%89%D0%B8%D0%BD%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%B0/%D0%B5%D0%B7%D0%B5%D1%80%D0%B5%D1%86-%D0%BF%D0%BB%D0%B0%D0%B6/#"
+      },
+      {
+            "name": "Крапец пляж",
+            "description": "Пляж в община Шабла",
+            "type": "Beach",
+            "address": "Крапец, България",
+            "website": "https://beaches.bg/destination/%D0%BE%D0%B1%D1%89%D0%B8%D0%BD%D0%B0-%D1%88%D0%B0%D0%B1%D0%BB%D0%B0/%D0%BA%D1%80%D0%B0%D0%BF%D0%B5%D1%86-%D0%BF%D0%BB%D0%B0%D0%B6/#"
+      },
+      {
+            "name": "Кара-Дере",
+            "description": "Природна забележителност",
+            "type": "Nature",
+            "address": "Шабла, България",
+            "website": "https://gowhere.bg/mesta/more/kara-dere/"
+      },
+      {
+            "name": "Иракли пляж",
+            "description": "Пляж в община Несебър",
+            "type": "Beach",
+            "address": "Иракли, България",
+            "website": "https://beaches.bg/destination/%D0%BE%D0%B1%D1%89%D0%B8%D0%BD%D0%B0-%D0%BD%D0%B5%D1%81%D0%B5%D0%B1%D1%8A%D1%80/%D0%B8%D1%80%D0%B0%D0%BA%D0%BB%D0%B8-%D0%BF%D0%BB%D0%B0%D0%B6/"
+      },
+      {
+            "name": "Калиакра",
+            "description": "Исторически форт и природна резервация",
+            "type": "Historical Site",
+            "address": "Калиакра, България",
+            "website": "https://kaliakria.com/"
+      },
+      {
+            "name": "Пенека Бистро",
+            "description": "Традиционен ресторант с местна кухня",
+            "type": "Restaurant",
+            "address": "Черноморие, България",
+            "website": "https://peneka.com/bistro"
+      },
+      {
+            "name": "Beaches.bg",
+            "description": "Портал с информация за пляжи",
+            "type": "Information",
+            "address": "България",
+            "website": "https://beaches.bg/catalog/"
+      }
+],
     stays: [
       {
             "name": "Complex Bora",
@@ -813,18 +1267,167 @@ const REGIONS = [
     icon: Landmark,
     pois: [
       {
-        name: "Царевец",
-        blurb: "Средновековна крепост над Велико Търново, вечерно светлинно шоу.",
+            "name": "Sboryanovo",
+            "description": "Археологически парк с древни находки",
+            "type": "Archaeological Site",
+            "address": "Северен край, България",
+            "website": "https://cherga.bg/sboryanovo-dokosvaniya-do-bezsma-rtiet/"
       },
       {
-        name: "Арбанаси",
-        blurb: "Село с укрепени възрожденски къщи и стенописни църкви.",
+            "name": "Koprivshtitsa",
+            "description": "Исторически град с традиционна архитектура",
+            "type": "Historical Site",
+            "address": "Копривщица, България",
+            "website": "https://koprivshtitsa-bg.com/bg/culture/"
       },
       {
-        name: "Русенски Лом",
-        blurb: "Природен парк със скални манастири, издълбани във варовика.",
+            "name": "Galeria Koprivshtitsa",
+            "description": "Художествена галерия",
+            "type": "Museum",
+            "address": "Копривщица, България",
+            "website": "https://www.galeria-koprivshtica.com/"
       },
-    ],
+      {
+            "name": "Troyan Monastery",
+            "description": "Исторически манастир",
+            "type": "Religious Site",
+            "address": "Троян, България",
+            "website": "https://opoznai.bg/troyan/"
+      },
+      {
+            "name": "Ekopateka Balkandjii",
+            "description": "Еко-маршрут в природата",
+            "type": "Hiking Trail",
+            "address": "Северен край, България",
+            "website": "https://opoznai.bg/view/ekopateka-po-stapkite-na-balkandjiite"
+      },
+      {
+            "name": "Apriltsi",
+            "description": "Туристическо селище",
+            "type": "Village",
+            "address": "Априлци, България",
+            "website": "https://apriltsi.org/"
+      },
+      {
+            "name": "Pleven Hut",
+            "description": "Планинска хижа",
+            "type": "Mountain Hut",
+            "address": "Северен край, България",
+            "website": "http://pleven-hut.zabelejitelnosti.info/"
+      },
+      {
+            "name": "Isara",
+            "description": "Исторически град",
+            "type": "Historical Site",
+            "address": "Северен край, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%98%D1%81%D0%B0%D1%80%D0%B0"
+      },
+      {
+            "name": "Kachulata",
+            "description": "Природна забележителност",
+            "type": "Natural Wonder",
+            "address": "Северен край, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%9A%D0%B0%D1%87%D1%83%D0%BB%D0%B0%D1%82%D0%B0"
+      },
+      {
+            "name": "Studen Kladenets",
+            "description": "Светилище и религиозно място",
+            "type": "Religious Site",
+            "address": "Северен край, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B5%D0%BD%D0%B5%D1%86"
+      },
+      {
+            "name": "Balkan Legends",
+            "description": "Туристически обект",
+            "type": "Tourist Attraction",
+            "address": "Северен край, България",
+            "website": "https://balkanlegends.eu/bg/"
+      },
+      {
+            "name": "Eco Complex Klisura",
+            "description": "Еко-туризъм",
+            "type": "Eco Tourism",
+            "address": "Северен край, България",
+            "website": "https://opoznai.bg/view/eko-kompleks-klisura"
+      },
+      {
+            "name": "Balkan Center",
+            "description": "Туристически център",
+            "type": "Tourist Attraction",
+            "address": "Северен край, България",
+            "website": "https://balkancenter.bg/"
+      },
+      {
+            "name": "Uzana",
+            "description": "Туристическо селище",
+            "type": "Village",
+            "address": "Узана, България",
+            "website": "https://www.uzanabg.com/"
+      },
+      {
+            "name": "Kompleks Chiflika",
+            "description": "Туристически комплекс",
+            "type": "Tourist Attraction",
+            "address": "Северен край, България",
+            "website": "https://www.komplekschiflika.com/"
+      },
+      {
+            "name": "Archeologicheski Park Topolnitza",
+            "description": "Археологически парк",
+            "type": "Archaeological Site",
+            "address": "Северен край, България",
+            "website": "https://opoznai.bg/view/arheologicheski-park-topolnitza-chavdar"
+      },
+      {
+            "name": "Tryavna Hills",
+            "description": "Планински маршрути",
+            "type": "Mountain",
+            "address": "Трявна, България",
+            "website": "https://www.tryavnahills.com/prices/"
+      },
+      {
+            "name": "Uzana Festival",
+            "description": "Фестивал и туристически обект",
+            "type": "Festival",
+            "address": "Узана, България",
+            "website": "https://uzanafest.gabrovo.bg/"
+      },
+      {
+            "name": "Vruh Babyak",
+            "description": "Планински връх",
+            "type": "Mountain Peak",
+            "address": "Северен край, България",
+            "website": "https://www.google.com/search?q=%D0%B2%D1%80%D1%8A%D1%85+%D0%B1%D0%B0%D0%B1%D1%8F%D0%BA"
+      },
+      {
+            "name": "Strelcha",
+            "description": "Туристическо селище",
+            "type": "Village",
+            "address": "Стрелча, България",
+            "website": "https://www.strelcha.bg/"
+      },
+      {
+            "name": "Kazanlak",
+            "description": "Град на розите",
+            "type": "Historical Site",
+            "address": "Казанлък, България",
+            "website": "https://www.campingkazanlak.com/"
+      },
+      {
+            "name": "Pod Oreha Zlatica",
+            "description": "Туристически обект",
+            "type": "Tourist Attraction",
+            "address": "Северен край, България",
+            "website": "https://www.facebook.com/POD.OREHA.ZLATICA/"
+      },
+      {
+            "name": "Shumen Fortress",
+            "description": "Историческа крепост",
+            "type": "Historical Site",
+            "address": "Шумен, България",
+            "website": "https://www.google.com/travel/search?q=%D1%88%D1%83%D0%BC%D0%B5%D0%BD"
+      }
+],
     stays: [
       {
             "name": "Seven Generations Complex",
@@ -1094,18 +1697,153 @@ const REGIONS = [
     icon: Compass,
     pois: [
       {
-        name: "Старият град на Пловдив",
-        blurb: "Възрожденски къщи и античен театър, все още в active употреба.",
+            "name": "Скумсале",
+            "description": "Исторически град с археологически находки",
+            "type": "Archaeological Site",
+            "address": "Южна България, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%A1%D0%BA%D1%83%D0%BC%D1%81%D0%B0%D0%BB%D0%B5"
       },
       {
-        name: "Бачковски манастир",
-        blurb: "Втори по значение манастир в страната, основан през XI век.",
+            "name": "Леново село",
+            "description": "Традиционно село с исторически значение",
+            "type": "Village",
+            "address": "Леново, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%9B%D0%B5%D0%BD%D0%BE%D0%B2%D0%BE_(%D1%81%D0%B5%D0%BB%D0%BE)"
       },
       {
-        name: "Асенова крепост",
-        blurb: "Крепост над Асеновград с църква на скален ръб.",
+            "name": "Кабиле древен град",
+            "description": "Древен град с крепост и музей",
+            "type": "Archaeological Site",
+            "address": "Кабиле, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B1%D0%B8%D0%BB%D0%B5_(%D0%B4%D1%80%D0%B5%D0%B2%D0%B5%D0%BD_%D0%B3%D1%80%D0%B0%D0%B4)"
       },
-    ],
+      {
+            "name": "Заичи връх",
+            "description": "Планински връх с панорамна гледка",
+            "type": "Mountain Peak",
+            "address": "Южна България, България",
+            "website": "https://www.aircrashconsult.info/BG/Rabbit_peak/Zaichi_vruh.htm"
+      },
+      {
+            "name": "Халката",
+            "description": "Природна формация с туристически маршрути",
+            "type": "Natural Wonder",
+            "address": "Южна България, България",
+            "website": "https://www.aircrashconsult.info/BG/Halkata_BG/Halkata.htm"
+      },
+      {
+            "name": "Чирпански манастир",
+            "description": "Исторически манастир с уникална архитектура",
+            "type": "Religious Site",
+            "address": "Южна България, България",
+            "website": "https://www.google.com/search?q=%D0%A7%D0%B8%D1%80%D0%BF%D0%B0%D0%BD%D1%81%D0%BA%D0%B8+%D0%BC%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80"
+      },
+      {
+            "name": "Батакунска крепост",
+            "description": "Исторична крепост с музей",
+            "type": "Historical Site",
+            "address": "Батакун, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%91%D0%B0%D1%82%D0%BA%D1%83%D0%BD%D1%81%D0%BA%D0%B0_%D0%BA%D1%80%D0%B5%D0%BF%D0%BE%D1%81%D1%82"
+      },
+      {
+            "name": "Батакунски манастир",
+            "description": "Исторически манастир в планинската местност",
+            "type": "Religious Site",
+            "address": "Батакун, България",
+            "website": "https://bg.wikipedia.org/wiki/%D0%91%D0%B0%D1%82%D0%BA%D1%83%D0%BD%D1%81%D0%BA%D0%B8_%D0%BC%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80"
+      },
+      {
+            "name": "Паталеница",
+            "description": "Планинско село с еко-туризъм",
+            "type": "Village",
+            "address": "Паталеница, България",
+            "website": "https://uchiteli.bg/interesting/v-patalenica-vsichko-e-po-syrce-i-kristalniqt-vyzduh-i-prirodata/4563"
+      },
+      {
+            "name": "Аквапарк Варвара",
+            "description": "Водни развлечения и спортни активности",
+            "type": "Water Park",
+            "address": "Варвара, България",
+            "website": "https://www.aquapark-varvara.com/"
+      },
+      {
+            "name": "Братя Дасколови",
+            "description": "Исторически място с археологически находки",
+            "type": "Archaeological Site",
+            "address": "Братя Дасколови, България",
+            "website": "https://pochivka.bg/bratya-daskalovi-zabelezhitelnosti-g245"
+      },
+      {
+            "name": "Одриско царство",
+            "description": "Древно царство с музей и експозиция",
+            "type": "Museum",
+            "address": "Южна България, България",
+            "website": "https://www.chambersz.com/novootkrit-centar-na-odriskoto-carstvo-do-bratya-daskalovi-32847"
+      },
+      {
+            "name": "Вкаменена святба",
+            "description": "Природна геологична формация",
+            "type": "Natural Wonder",
+            "address": "Южна България, България",
+            "website": "https://www.google.com/maps/place/%D0%92%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B0%D1%82%D0%B0+%D1%81%D0%B2%D0%B0%D1%82%D0%B1%D0%B0"
+      },
+      {
+            "name": "Мраморно езеро",
+            "description": "Красиво езеро с минерални воды",
+            "type": "Natural Wonder",
+            "address": "Южна България, България",
+            "website": "https://vila.bg/article/mramorno-ezero-pravoslav"
+      },
+      {
+            "name": "Златноливаденски манастир",
+            "description": "Исторически манастир със святи икони",
+            "type": "Religious Site",
+            "address": "Южна България, България",
+            "website": "https://www.google.com/maps/place/%D0%97%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%D0%BB%D0%B8%D0%B2%D0%B0%D0%B4%D0%B5%D0%BD%D1%81%D0%BA%D0%B8+%D0%BC%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80"
+      },
+      {
+            "name": "Минерални бани Старозагора",
+            "description": "Спа курорт с лечебни воды",
+            "type": "Spa",
+            "address": "Старозагорски минерални бани, България",
+            "website": "https://www.plovdiv24.bg/novini/regionalni/Na-edin-chas-put-ot-Plovdiv-mineralni-bani-lekuvat-kup-bolesti-oshte-ot-rim-1685170"
+      },
+      {
+            "name": "Besapara",
+            "description": "Историческо място с археологически значение",
+            "type": "Archaeological Site",
+            "address": "Южна България, България",
+            "website": "https://bg.m.wikipedia.org/wiki/%D0%91%D0%B5%D1%81%D0%B0%D0%BF%D0%B0%D1%80%D0%B0"
+      },
+      {
+            "name": "Паракліс Св. Петър и Павел",
+            "description": "Религиозна святиня с исторически значение",
+            "type": "Religious Site",
+            "address": "Южна България, България",
+            "website": "https://www.google.com/maps/place/%D0%9F%D0%B0%D1%80%D0%B0%D0%BA%D0%BB%D0%B8%D1%81+%22%D0%A1%D0%B2.%D0%A1%D0%B2.%D0%9F%D0%B5%D1%82%D1%8A%D1%80+%D0%B8+%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB%22"
+      },
+      {
+            "name": "Благодатие",
+            "description": "Еко-туризъм и природни преживявания",
+            "type": "Eco Tourism",
+            "address": "Южна България, България",
+            "website": "https://blagodatie.com/bg/"
+      },
+      {
+            "name": "Chemernik",
+            "description": "Еко-туризъм и планински преживявания",
+            "type": "Eco Tourism",
+            "address": "Южна България, България",
+            "website": "https://chemernik.wordpress.com/about/"
+      },
+      {
+            "name": "Skitnika",
+            "description": "Планинска хижа и туристически комплекс",
+            "type": "Mountain Hut",
+            "address": "Южна България, България",
+            "website": "https://skitnika.bg/"
+      }
+],
     stays: [
       {
             "name": "Hills Beer",
@@ -1298,18 +2036,62 @@ const REGIONS = [
     icon: Mountain,
     pois: [
       {
-        name: "Белоградчишки скали",
-        blurb: "Червени пясъчникови формации с крепост от римско време.",
+            "name": "Restaurant Ona",
+            "description": "Традиционна българска кухня и атмосфера",
+            "type": "Restaurant",
+            "address": "Северозапад, България",
+            "website": "https://www.facebook.com/restaurant.ona/"
       },
       {
-        name: "Пещера Магура",
-        blurb: "Праисторически рисунки, направени с прилепен гуано преди хиляди години.",
+            "name": "Bebeka Attraction",
+            "description": "Туристически обект и природна красота",
+            "type": "Tourist Attraction",
+            "address": "Северен Западен край, България",
+            "website": "https://bebeka.bg/bg/%D0%B7%D0%B0-bebeka-3/"
       },
       {
-        name: "Крепостта Баба Вида",
-        blurb: "Единствената напълно запазена средновековна крепост в България, край Дунав.",
+            "name": "Restaurant Ona",
+            "description": "Ресторант с традиционна българска кухня, управляван от шеф готвач, предлагащ дине-ин услуга в атмосферично място в село Stakevci",
+            "type": "Restaurant",
+            "address": "улица 31-ва #1, Stakevci, България",
+            "website": "https://www.facebook.com/restaurant.ona/"
       },
-    ],
+      {
+            "name": "Belogradchik Rocks",
+            "description": "Природен феномен - величествени скалисти образувания, един от най-красивите природни обекти в България, идеален за туризъм и фотография",
+            "type": "Natural Attraction",
+            "address": "Белоградчик, България",
+            "website": "https://www.belogradchik.bg/"
+      },
+      {
+            "name": "Belogradchik Fortress",
+            "description": "Историческа крепост от османския период, построена на върха на скалите, предлагаща панорамни гледки към региона",
+            "type": "Historical Site",
+            "address": "Белоградчик, България",
+            "website": "https://www.belogradchik.bg/"
+      },
+      {
+            "name": "Vidin Fortress",
+            "description": "Историческа крепост на Дунав, един от най-добре запазените османски укрепления в България",
+            "type": "Historical Site",
+            "address": "Видин, България",
+            "website": "https://www.vidinfortress.bg/"
+      },
+      {
+            "name": "Danube River",
+            "description": "Река Дунав, втората по дължина река в Европа, предлагаща възможности за речни круизи и риболов",
+            "type": "Natural Attraction",
+            "address": "Видин, България",
+            "website": "https://www.danube.bg/"
+      },
+      {
+            "name": "Obrochishte Monastery",
+            "description": "Древен манастир в планинския район на Северозапада, място на духовност и история",
+            "type": "Religious Site",
+            "address": "Оброчище, България",
+            "website": "https://www.obrochishte.bg/"
+      }
+],
     stays: [
       {
             "name": "Restaurant Ona",
@@ -1464,7 +2246,7 @@ function PillPrice({ price }) {
 
 export default function BGtoGo() {
   const [selectedRegion, setSelectedRegion] = useState(REGIONS[0].id);
-  const [showAllStays, setShowAllStays] = useState(false);
+  const [showAllPois, setShowAllPois] = useState(false);
   const [query, setQuery] = useState("");
   const [contact, setContact] = useState({ name: "", email: "", message: "" });
   const [contactError, setContactError] = useState("");
@@ -1477,7 +2259,7 @@ export default function BGtoGo() {
     (p) =>
       !q ||
       p.name.toLowerCase().includes(q) ||
-      p.blurb.toLowerCase().includes(q)
+      p.description.toLowerCase().includes(q)
   );
   const filteredStays = region.stays.filter(
     (s) => !q || s.name.toLowerCase().includes(q) || s.description.toLowerCase().includes(q)
@@ -1653,7 +2435,7 @@ export default function BGtoGo() {
                 className="bgtogo-region-btn"
                 onClick={() => {
                   setSelectedRegion(r.id);
-                  setShowAllStays(false);
+                  setShowAllPois(false);
                 }}
                 style={{
                   display: "flex",
@@ -1688,47 +2470,6 @@ export default function BGtoGo() {
         {filteredPois.length === 0 ? (
           <p style={{ color: TOKENS.inkDim, fontSize: 14 }}>Нищо не съвпада с търсенето в този регион.</p>
         ) : (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))",
-              gap: 14,
-            }}
-          >
-            {filteredPois.map((p) => (
-              <div
-                key={p.name}
-                className="bgtogo-card"
-                style={{
-                  background: TOKENS.surface,
-                  border: `1px solid ${TOKENS.line}`,
-                  borderRadius: 12,
-                  padding: "16px 16px 18px",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                  <MapPin size={15} color={TOKENS.gold} />
-                  <span style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 15 }}>
-                    {p.name}
-                  </span>
-                </div>
-                <p style={{ color: TOKENS.inkDim, fontSize: 13.5, margin: 0 }}>
-                  {p.blurb}
-                </p>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-
-      {/* Stays */}
-      <section style={{ padding: "32px clamp(16px,4vw,48px) 0" }}>
-        <h3 style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 18, margin: "0 0 14px" }}>
-          Къде да отседнеш
-        </h3>
-        {filteredStays.length === 0 ? (
-          <p style={{ color: TOKENS.inkDim, fontSize: 14 }}>Нищо не съвпада с търсенето в този регион.</p>
-        ) : (
           <>
             <div
               style={{
@@ -1737,9 +2478,9 @@ export default function BGtoGo() {
                 gap: 14,
               }}
             >
-              {(showAllStays ? filteredStays : filteredStays.slice(0, STAYS_PAGE_SIZE)).map((s) => (
+              {(showAllPois ? filteredPois : filteredPois.slice(0, STAYS_PAGE_SIZE)).map((p) => (
                 <div
-                  key={s.name + s.address}
+                  key={p.name + p.address}
                   className="bgtogo-card"
                   style={{
                     background: TOKENS.surface,
@@ -1753,33 +2494,46 @@ export default function BGtoGo() {
                 >
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
-                      <HomeIcon size={15} color={TOKENS.teal} style={{ marginTop: 2, flexShrink: 0 }} />
-                      <p style={{ margin: 0, fontWeight: 600, fontSize: 14.5 }}>{s.name}</p>
+                      <MapPin size={15} color={TOKENS.gold} style={{ marginTop: 2, flexShrink: 0 }} />
+                      <span style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 15 }}>
+                        {p.name}
+                      </span>
                     </div>
-                    <PillPrice price={s.priceRange} />
-                  </div>
-                  <p style={{ margin: 0, color: TOKENS.inkDim, fontSize: 13 }}>{s.description}</p>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginTop: 2 }}>
-                    <span style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: TOKENS.inkDim }}>
-                      <MapPin size={12} /> {s.address}
+                    <span
+                      style={{
+                        fontFamily: "var(--mono)",
+                        fontSize: 11,
+                        color: TOKENS.teal,
+                        border: `1px solid ${TOKENS.teal}`,
+                        borderRadius: 4,
+                        padding: "1px 6px",
+                        whiteSpace: "nowrap",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {p.type}
                     </span>
-                    {s.website && (
+                  </div>
+                  <p style={{ color: TOKENS.inkDim, fontSize: 13.5, margin: 0 }}>{p.description}</p>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginTop: 2 }}>
+                    <span style={{ fontSize: 12, color: TOKENS.inkDim }}>{p.address}</span>
+                    {p.website && (
                       <a
-                        href={s.website}
+                        href={p.website}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ fontSize: 12, color: TOKENS.gold, textDecoration: "none", flexShrink: 0 }}
                       >
-                        уебсайт ↗
+                        повече ↗
                       </a>
                     )}
                   </div>
                 </div>
               ))}
             </div>
-            {!showAllStays && filteredStays.length > STAYS_PAGE_SIZE && (
+            {!showAllPois && filteredPois.length > STAYS_PAGE_SIZE && (
               <button
-                onClick={() => setShowAllStays(true)}
+                onClick={() => setShowAllPois(true)}
                 style={{
                   marginTop: 16,
                   background: "transparent",
@@ -1791,10 +2545,68 @@ export default function BGtoGo() {
                   cursor: "pointer",
                 }}
               >
-                Покажи всички {filteredStays.length} места
+                Покажи всички {filteredPois.length} места
               </button>
             )}
           </>
+        )}
+      </section>
+
+      {/* Stays */}
+      <section style={{ padding: "32px clamp(16px,4vw,48px) 0" }}>
+        <h3 style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 18, margin: "0 0 14px" }}>
+          Къде да отседнеш
+        </h3>
+        {filteredStays.length === 0 ? (
+          <p style={{ color: TOKENS.inkDim, fontSize: 14 }}>Нищо не съвпада с търсенето в този регион.</p>
+        ) : (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
+              gap: 14,
+            }}
+          >
+            {filteredStays.map((s) => (
+              <div
+                key={s.name + s.address}
+                className="bgtogo-card"
+                style={{
+                  background: TOKENS.surface,
+                  border: `1px solid ${TOKENS.line}`,
+                  borderRadius: 12,
+                  padding: "16px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                    <HomeIcon size={15} color={TOKENS.teal} style={{ marginTop: 2, flexShrink: 0 }} />
+                    <p style={{ margin: 0, fontWeight: 600, fontSize: 14.5 }}>{s.name}</p>
+                  </div>
+                  <PillPrice price={s.priceRange} />
+                </div>
+                <p style={{ margin: 0, color: TOKENS.inkDim, fontSize: 13 }}>{s.description}</p>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginTop: 2 }}>
+                  <span style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: TOKENS.inkDim }}>
+                    <MapPin size={12} /> {s.address}
+                  </span>
+                  {s.website && (
+                    <a
+                      href={s.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: 12, color: TOKENS.gold, textDecoration: "none", flexShrink: 0 }}
+                    >
+                      уебсайт ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </section>
 

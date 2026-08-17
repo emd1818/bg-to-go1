@@ -14,8 +14,6 @@ import {
   X,
 } from "lucide-react";
 
-const STAYS_PAGE_SIZE = 12;
-
 const TOKENS = {
   bg: "#182019",
   surface: "#212B23",
@@ -2246,7 +2244,6 @@ function PillPrice({ price }) {
 
 export default function BGtoGo() {
   const [selectedRegion, setSelectedRegion] = useState(REGIONS[0].id);
-  const [showAllPois, setShowAllPois] = useState(false);
   const [query, setQuery] = useState("");
   const [contact, setContact] = useState({ name: "", email: "", message: "" });
   const [contactError, setContactError] = useState("");
@@ -2433,10 +2430,7 @@ export default function BGtoGo() {
               <button
                 key={r.id}
                 className="bgtogo-region-btn"
-                onClick={() => {
-                  setSelectedRegion(r.id);
-                  setShowAllPois(false);
-                }}
+                onClick={() => setSelectedRegion(r.id)}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -2470,85 +2464,66 @@ export default function BGtoGo() {
         {filteredPois.length === 0 ? (
           <p style={{ color: TOKENS.inkDim, fontSize: 14 }}>Нищо не съвпада с търсенето в този регион.</p>
         ) : (
-          <>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
-                gap: 14,
-              }}
-            >
-              {(showAllPois ? filteredPois : filteredPois.slice(0, STAYS_PAGE_SIZE)).map((p) => (
-                <div
-                  key={p.name + p.address}
-                  className="bgtogo-card"
-                  style={{
-                    background: TOKENS.surface,
-                    border: `1px solid ${TOKENS.line}`,
-                    borderRadius: 12,
-                    padding: "16px",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 8,
-                  }}
-                >
-                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
-                    <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
-                      <MapPin size={15} color={TOKENS.gold} style={{ marginTop: 2, flexShrink: 0 }} />
-                      <span style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 15 }}>
-                        {p.name}
-                      </span>
-                    </div>
-                    <span
-                      style={{
-                        fontFamily: "var(--mono)",
-                        fontSize: 11,
-                        color: TOKENS.teal,
-                        border: `1px solid ${TOKENS.teal}`,
-                        borderRadius: 4,
-                        padding: "1px 6px",
-                        whiteSpace: "nowrap",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {p.type}
-                    </span>
-                  </div>
-                  <p style={{ color: TOKENS.inkDim, fontSize: 13.5, margin: 0 }}>{p.description}</p>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginTop: 2 }}>
-                    <span style={{ fontSize: 12, color: TOKENS.inkDim }}>{p.address}</span>
-                    {p.website && (
-                      <a
-                        href={p.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ fontSize: 12, color: TOKENS.gold, textDecoration: "none", flexShrink: 0 }}
-                      >
-                        повече ↗
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-            {!showAllPois && filteredPois.length > STAYS_PAGE_SIZE && (
-              <button
-                onClick={() => setShowAllPois(true)}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))",
+              gap: 14,
+            }}
+          >
+            {filteredPois.map((p) => (
+              <div
+                key={p.name + p.address}
+                className="bgtogo-card"
                 style={{
-                  marginTop: 16,
-                  background: "transparent",
-                  border: `1px solid ${TOKENS.goldDim}`,
-                  color: TOKENS.gold,
-                  borderRadius: 8,
-                  padding: "8px 16px",
-                  fontSize: 13,
-                  cursor: "pointer",
+                  background: TOKENS.surface,
+                  border: `1px solid ${TOKENS.line}`,
+                  borderRadius: 12,
+                  padding: "16px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
                 }}
               >
-                Покажи всички {filteredPois.length} места
-              </button>
-            )}
-          </>
+                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                    <MapPin size={15} color={TOKENS.gold} style={{ marginTop: 2, flexShrink: 0 }} />
+                    <span style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 15 }}>
+                      {p.name}
+                    </span>
+                  </div>
+                  <span
+                    style={{
+                      fontFamily: "var(--mono)",
+                      fontSize: 11,
+                      color: TOKENS.teal,
+                      border: `1px solid ${TOKENS.teal}`,
+                      borderRadius: 4,
+                      padding: "1px 6px",
+                      whiteSpace: "nowrap",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {p.type}
+                  </span>
+                </div>
+                <p style={{ color: TOKENS.inkDim, fontSize: 13.5, margin: 0 }}>{p.description}</p>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginTop: 2 }}>
+                  <span style={{ fontSize: 12, color: TOKENS.inkDim }}>{p.address}</span>
+                  {p.website && (
+                    <a
+                      href={p.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: 12, color: TOKENS.gold, textDecoration: "none", flexShrink: 0 }}
+                    >
+                      повече ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         )}
       </section>
 

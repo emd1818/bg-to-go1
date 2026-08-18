@@ -12,6 +12,8 @@ import {
   Mail,
   Compass,
   X,
+  ArrowLeft,
+  Globe,
 } from "lucide-react";
 
 const TOKENS = {
@@ -25,6 +27,16 @@ const TOKENS = {
   goldDim: "#9C7A22",
   rose: "#AE4634",
   teal: "#4C8E86",
+};
+
+const navBtnStyle = {
+  color: "inherit",
+  background: "none",
+  border: "none",
+  padding: 0,
+  fontFamily: "var(--body)",
+  fontSize: 14,
+  cursor: "pointer",
 };
 
 const REGIONS = [
@@ -2151,6 +2163,173 @@ const WEEKLY_PICK = {
     "Дървените къщи и звукът на Родопската държавна консерватория, вплетен в мъглата на долината — есента е тихият сезон, в който селото се вижда най-добре.",
 };
 
+const CULTURAL_CATEGORIES = {
+  bg: {
+    cultural_phenomena: "Културни феномени и забележителности",
+    monasteries: "Манастири",
+    natural_phenomena: "Природни феномени и забележителности",
+    historical_sites: "Исторически места",
+    abandoned_villages: "Изчезващи села",
+    communist_heritage: "Наследство от комунизма",
+    spa_tourism: "Спа туризъм",
+    wine_tourism: "Винен туризъм",
+    gourmet_tourism: "Гурме туризъм",
+  },
+  en: {
+    cultural_phenomena: "Cultural Phenomena and Landmarks",
+    monasteries: "Monasteries",
+    natural_phenomena: "Natural Phenomena and Landmarks",
+    historical_sites: "Historical Sites",
+    abandoned_villages: "Abandoned Villages",
+    communist_heritage: "Communist Heritage",
+    spa_tourism: "Spa Tourism",
+    wine_tourism: "Wine Tourism",
+    gourmet_tourism: "Gourmet Tourism",
+  },
+};
+
+const CULTURAL_UI = {
+  bg: {
+    title: "Места за културен туризъм",
+    subtitle: "Открийте богатото културно наследство на България",
+    back: "Назад",
+    noResults: "Няма налични места за този вид туризъм",
+    visitWebsite: "Посетете сайта",
+    openingHours: "Работно време",
+    entryFee: "Входна такса",
+  },
+  en: {
+    title: "Cultural Tourism Places",
+    subtitle: "Discover Bulgaria's rich cultural heritage",
+    back: "Back",
+    noResults: "No places available for this type of tourism",
+    visitWebsite: "Visit Website",
+    openingHours: "Opening Hours",
+    entryFee: "Entry Fee",
+  },
+};
+
+const CULTURAL_PLACES = [
+  {
+    name: "Rila Monastery",
+    description: "One of Bulgaria's most important medieval monasteries, UNESCO World Heritage Site",
+    category: "monasteries",
+    region: "Rila and Pirin",
+    address: "Rila 2400, Bulgaria",
+    phone: "+359 7054 2208",
+    website: "https://www.rilamonastery.bg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Rila_Monastery_-_Bulgaria_-_2019.jpg/1280px-Rila_Monastery_-_Bulgaria_-_2019.jpg",
+    rating: "4.8",
+    reviewCount: 2500,
+    openingHours: "09:00-17:00",
+    entryFee: "10 BGN",
+  },
+  {
+    name: "Alexander Nevsky Cathedral",
+    description: "One of the largest Eastern Orthodox cathedrals in the world, located in Sofia",
+    category: "historical_sites",
+    region: "Near Sofia",
+    address: "1 Alexander Nevsky Sq, 1000 Sofia",
+    phone: "+359 2 9181 772",
+    website: "https://www.alexander-nevsky.bg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Alexander_Nevsky_Cathedral_Sofia_2010.jpg/1280px-Alexander_Nevsky_Cathedral_Sofia_2010.jpg",
+    rating: "4.7",
+    reviewCount: 1800,
+    openingHours: "07:00-19:00",
+    entryFee: "Free",
+  },
+  {
+    name: "Boyana Church",
+    description: "Medieval church with exceptional frescoes, UNESCO World Heritage Site",
+    category: "historical_sites",
+    region: "Near Sofia",
+    address: "19 Boyanskiya Monastery St, 1616 Sofia",
+    phone: "+359 2 9595 139",
+    website: "https://www.boyanamuseum.bg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Boyana_Church_Sofia_Bulgaria_2010.jpg/1280px-Boyana_Church_Sofia_Bulgaria_2010.jpg",
+    rating: "4.6",
+    reviewCount: 1200,
+    openingHours: "09:30-17:30",
+    entryFee: "15 BGN",
+  },
+  {
+    name: "Seven Rila Lakes",
+    description: "Stunning natural phenomenon - seven glacial lakes at different altitudes",
+    category: "natural_phenomena",
+    region: "Rila and Pirin",
+    address: "Rila Mountains, Bulgaria",
+    website: "https://www.rilamountains.bg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Seven_Rila_Lakes.jpg/1280px-Seven_Rila_Lakes.jpg",
+    rating: "4.9",
+    reviewCount: 3000,
+    openingHours: "24/7",
+    entryFee: "Free",
+  },
+  {
+    name: "Madara Rider",
+    description: "Ancient rock relief carving, UNESCO World Heritage Site",
+    category: "historical_sites",
+    region: "Northern Bulgaria",
+    address: "Madara, Bulgaria",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Madara_Rider.jpg/1280px-Madara_Rider.jpg",
+    rating: "4.5",
+    reviewCount: 800,
+    openingHours: "24/7",
+    entryFee: "Free",
+  },
+  {
+    name: "Rose Valley Wine Region",
+    description: "Famous Bulgarian wine region known for rose production and wine tourism",
+    category: "wine_tourism",
+    region: "Southern Bulgaria",
+    address: "Rose Valley, Bulgaria",
+    website: "https://www.rosevalley.bg",
+    rating: "4.7",
+    reviewCount: 1500,
+    openingHours: "09:00-18:00",
+    entryFee: "Free",
+  },
+  {
+    name: "Pomorie Salt Pans",
+    description: "Natural salt pans with therapeutic mud, popular spa tourism destination",
+    category: "spa_tourism",
+    region: "Black Sea",
+    address: "Pomorie, Bulgaria",
+    phone: "+359 596 24 511",
+    website: "https://www.pomoriebay.bg",
+    rating: "4.4",
+    reviewCount: 600,
+    openingHours: "09:00-17:00",
+    entryFee: "20 BGN",
+  },
+  {
+    name: "Koprivshtitsa",
+    description: "Historic town with preserved 19th-century architecture and cultural heritage",
+    category: "cultural_phenomena",
+    region: "Central Bulgaria",
+    address: "Koprivshtitsa, Bulgaria",
+    website: "https://www.koprivshtitsa.bg",
+    rating: "4.6",
+    reviewCount: 900,
+    openingHours: "24/7",
+    entryFee: "Free",
+  },
+  {
+    name: "Belogradchik Rocks",
+    description: "Stunning natural rock formations with fortress and cultural significance",
+    category: "natural_phenomena",
+    region: "Northwest",
+    address: "Belogradchik, Bulgaria",
+    phone: "+359 90 76 30 80",
+    website: "https://www.belogradchik.bg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Belogradchik_Rocks.jpg/1280px-Belogradchik_Rocks.jpg",
+    rating: "4.8",
+    reviewCount: 2000,
+    openingHours: "08:00-18:00",
+    entryFee: "15 BGN",
+  },
+];
+
 function Shevitsa({ color = TOKENS.gold, height = 14 }) {
   const id = useMemo(() => `shev-${Math.random().toString(36).slice(2, 8)}`, []);
   return (
@@ -2242,7 +2421,361 @@ function PillPrice({ price }) {
   );
 }
 
+function BackLink({ onClick, label = "Назад" }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 6,
+        background: "none",
+        border: "none",
+        color: TOKENS.gold,
+        fontSize: 14,
+        cursor: "pointer",
+        padding: 0,
+        marginBottom: 24,
+      }}
+    >
+      <ArrowLeft size={15} /> {label}
+    </button>
+  );
+}
+
+function LegalPage({ onBack, title, sections }) {
+  return (
+    <section style={{ padding: "40px clamp(16px,4vw,48px) 64px", maxWidth: 720 }}>
+      <BackLink onClick={onBack} />
+      <h1 style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 30, margin: "0 0 28px" }}>
+        {title}
+      </h1>
+      {sections.map((s, i) => (
+        <div key={i} style={{ marginBottom: 26 }}>
+          <h2 style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 18, margin: "0 0 10px" }}>
+            {s.heading}
+          </h2>
+          {s.paragraphs?.map((p, j) => (
+            <p key={j} style={{ color: TOKENS.inkDim, fontSize: 14.5, margin: "0 0 10px" }}>
+              {p}
+            </p>
+          ))}
+          {s.list && (
+            <ul style={{ color: TOKENS.inkDim, fontSize: 14.5, margin: "0 0 10px", paddingLeft: 20 }}>
+              {s.list.map((li, k) => (
+                <li key={k} style={{ marginBottom: 6 }}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+      <p style={{ color: TOKENS.inkDim, fontSize: 12.5, marginTop: 32 }}>
+        Последна актуализация: {new Date().toLocaleDateString("bg-BG")}
+      </p>
+    </section>
+  );
+}
+
+function AboutPage({ onBack }) {
+  return (
+    <LegalPage
+      onBack={onBack}
+      title="За нас"
+      sections={[
+        {
+          heading: "Добре дошли в BG to GO",
+          paragraphs: [
+            "BG to GO е вашият надежден спътник при планиране на пътешествия в България. Ние сме посветени на това да направим откритието на българските съкровища лесно, достъпно и вдъхновяващо.",
+          ],
+        },
+        {
+          heading: "Нашата мисия",
+          paragraphs: [
+            "Нашата мисия е да свържем туристите с най-добрите места за настаняване и туристически атракции в България. Вярваме, че всеки заслужава незабравимо пътешествие, пълно с автентични преживявания и открития.",
+          ],
+        },
+        {
+          heading: "Какво предлагаме",
+          list: [
+            "Всеобхватна информация — достъп до места за настаняване и туристически атракции, разделени по региони на България.",
+            "Лесна навигация — интуитивен интерфейс за бързо намиране на точно това, което търсиш.",
+            "Културен туризъм — манастири, природни феномени, винен и спа туризъм на едно място.",
+            "Актуална информация — база данни, събрана от регионите на страната.",
+          ],
+        },
+        {
+          heading: "Защо да ни изберете",
+          list: [
+            "Специализирана база данни за България",
+            "Подробна информация за всяко място",
+            "Контактни данни и връзки за резервация",
+            "Безплатен достъп без скрити такси",
+          ],
+        },
+        {
+          heading: "Свържете се с нас",
+          paragraphs: [
+            "Имате предложения, въпроси или желаете да добавите вашето място към нашата база данни? Свържете се с нас чрез контактната форма на приложението.",
+            "Благодарим, че избрахте BG to GO като вашия туристически спътник!",
+          ],
+        },
+      ]}
+    />
+  );
+}
+
+function TermsPage({ onBack }) {
+  return (
+    <LegalPage
+      onBack={onBack}
+      title="Условия на ползване"
+      sections={[
+        {
+          heading: "1. Приемане на условията",
+          paragraphs: [
+            'Чрез достъп и ползване на приложението BG to GO ("Приложението"), вие се съгласявате да бъдете обвързани от настоящите условия на ползване. Ако не се съгласявате с някое от условията, моля не ползвайте приложението.',
+          ],
+        },
+        {
+          heading: "2. Описание на услугата",
+          paragraphs: [
+            "BG to GO е туристическо приложение, което предоставя информация за места за настаняване и туристически атракции в България. Приложението служи в информационни цели и не е агент на никое от представените места.",
+          ],
+        },
+        {
+          heading: "3. Ограничения на отговорността",
+          paragraphs: [
+            'Приложението се предоставя "както е" без никакви гаранции. Ние не гарантираме точността, пълнотата или актуалността на информацията. Потребителите ползват информацията на своя собствена отговорност.',
+            "Ние не отговаряме за:",
+          ],
+          list: [
+            "Неточна или остаряла информация",
+            "Прекъсване или недостъпност на услугата",
+            "Загуба на данни или технически проблеми",
+            "Преки или косвени щети, произтичащи от ползването на приложението",
+          ],
+        },
+        {
+          heading: "4. Потребителско поведение",
+          paragraphs: ["Потребителите се съгласяват да не:"],
+          list: [
+            "Използват приложението за незаконни цели",
+            "Нарушават правата на други потребители",
+            "Качват вредоносен софтуер или вирусни материали",
+            "Се опитват да получат неоторизиран достъп до системите",
+            "Публикуват обидно, дискриминиращо или незаконно съдържание",
+          ],
+        },
+        {
+          heading: "5. Интелектуална собственост",
+          paragraphs: [
+            "Съдържанието, дизайнът и функционалността на приложението са собственост на BG to GO. Забранено е копиране, модифициране или разпространение без писмено разрешение.",
+          ],
+        },
+        {
+          heading: "6. Промени на условията",
+          paragraphs: [
+            "Ние си запазваме правото да променяме тези условия по всяко време. Продължаващото ползване на приложението след промени означава приемането им.",
+          ],
+        },
+        {
+          heading: "7. Контакт",
+          paragraphs: ["За въпроси относно тези условия, моля свържете се с нас чрез контактната форма на приложението."],
+        },
+      ]}
+    />
+  );
+}
+
+function PrivacyPage({ onBack }) {
+  return (
+    <LegalPage
+      onBack={onBack}
+      title="Политика за поверителност"
+      sections={[
+        {
+          heading: "1. Въведение",
+          paragraphs: [
+            "BG to GO уважава вашата поверителност и е ангажирана да защити вашите лични данни. Настоящата политика обяснява как събираме, използваме и защитаваме вашата информация.",
+          ],
+        },
+        {
+          heading: "2. Събиране на данни",
+          paragraphs: ["Приложението не изисква регистрация. Ние събираме следните видове информация:"],
+          list: [
+            "Информация от контактната форма: име, имейл и съобщение, ако изберете да ни пишете",
+            "Информация за ползване: как ползвате приложението, включително преглеждани страници",
+            "Техническа информация: тип браузър и други общи технически данни",
+          ],
+        },
+        {
+          heading: "3. Ползване на данни",
+          paragraphs: ["Данните, които предоставяте чрез контактната форма, се използват за:"],
+          list: ["Отговор на вашето запитване", "Подобряване на съдържанието и услугите"],
+        },
+        {
+          heading: "4. Споделяне на данни",
+          paragraphs: [
+            "Ние не продаваме вашите лични данни на трети страни и не ги споделяме извън обхвата, необходим за отговор на запитването ви.",
+          ],
+        },
+        {
+          heading: "5. Бисквитки",
+          paragraphs: [
+            "Приложението може да използва бисквитки за подобряване на потребителския опит. Можете да управлявате настройките на бисквитките чрез браузъра си.",
+          ],
+        },
+        {
+          heading: "6. Ваши права",
+          paragraphs: ["Имате право да поискате достъп, корекция или изтриване на данните, които сте ни предоставили чрез контактната форма."],
+        },
+        {
+          heading: "7. Промени на политиката",
+          paragraphs: ["Ние можем да обновим тази политика по всяко време. Ще посочим значителни промени тук."],
+        },
+        {
+          heading: "8. Контакт",
+          paragraphs: ["За въпроси относно вашите данни и тази политика, моля свържете се с нас чрез контактната форма на приложението."],
+        },
+      ]}
+    />
+  );
+}
+
+function CulturalTourismPage({ onBack }) {
+  const [lang, setLang] = useState("bg");
+  const [category, setCategory] = useState("monasteries");
+  const t = CULTURAL_UI[lang];
+  const categories = CULTURAL_CATEGORIES[lang];
+  const categoryKeys = Object.keys(CULTURAL_CATEGORIES.bg);
+  const places = CULTURAL_PLACES.filter((p) => p.category === category);
+
+  return (
+    <section style={{ padding: "40px clamp(16px,4vw,48px) 64px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+        <BackLink onClick={onBack} label={t.back} />
+        <div style={{ display: "flex", gap: 6, marginBottom: 24 }}>
+          {["bg", "en"].map((code) => (
+            <button
+              key={code}
+              onClick={() => setLang(code)}
+              style={{
+                fontSize: 12,
+                fontFamily: "var(--mono)",
+                padding: "4px 10px",
+                borderRadius: 6,
+                border: `1px solid ${lang === code ? TOKENS.gold : TOKENS.line}`,
+                background: lang === code ? "rgba(214,164,36,0.12)" : "transparent",
+                color: lang === code ? TOKENS.gold : TOKENS.inkDim,
+                cursor: "pointer",
+              }}
+            >
+              {code.toUpperCase()}
+            </button>
+          ))}
+        </div>
+      </div>
+      <h1 style={{ fontFamily: "var(--display)", fontWeight: 600, fontSize: 30, margin: "0 0 6px" }}>{t.title}</h1>
+      <p style={{ color: TOKENS.inkDim, fontSize: 14.5, margin: "0 0 26px" }}>{t.subtitle}</p>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill,minmax(180px,1fr))",
+          gap: 8,
+          marginBottom: 28,
+        }}
+      >
+        {categoryKeys.map((key) => {
+          const active = key === category;
+          return (
+            <button
+              key={key}
+              onClick={() => setCategory(key)}
+              style={{
+                padding: "10px 12px",
+                borderRadius: 8,
+                fontSize: 13,
+                textAlign: "center",
+                border: `1px solid ${active ? TOKENS.gold : TOKENS.line}`,
+                background: active ? "rgba(214,164,36,0.12)" : TOKENS.surface,
+                color: active ? TOKENS.gold : TOKENS.ink,
+                cursor: "pointer",
+              }}
+            >
+              {categories[key]}
+            </button>
+          );
+        })}
+      </div>
+
+      {places.length === 0 ? (
+        <p style={{ color: TOKENS.inkDim, fontSize: 14 }}>{t.noResults}</p>
+      ) : (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 16 }}>
+          {places.map((p) => (
+            <div
+              key={p.name}
+              className="bgtogo-card"
+              style={{
+                background: TOKENS.surface,
+                border: `1px solid ${TOKENS.line}`,
+                borderRadius: 12,
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {p.imageUrl && (
+                <div style={{ height: 150, overflow: "hidden" }}>
+                  <img src={p.imageUrl} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              )}
+              <div style={{ padding: 16, display: "flex", flexDirection: "column", gap: 8 }}>
+                <p style={{ margin: 0, fontFamily: "var(--display)", fontWeight: 600, fontSize: 15.5 }}>{p.name}</p>
+                <p style={{ margin: 0, color: TOKENS.inkDim, fontSize: 13 }}>{p.description}</p>
+                {p.rating && (
+                  <span style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12.5 }}>
+                    <Star size={13} color={TOKENS.gold} fill={TOKENS.gold} />
+                    {p.rating} {p.reviewCount && <span style={{ color: TOKENS.inkDim }}>({p.reviewCount})</span>}
+                  </span>
+                )}
+                <span style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: TOKENS.inkDim }}>
+                  <MapPin size={12} /> {p.address}
+                </span>
+                {p.openingHours && (
+                  <span style={{ fontSize: 12, color: TOKENS.inkDim }}>
+                    {t.openingHours}: {p.openingHours}
+                  </span>
+                )}
+                {p.entryFee && (
+                  <span style={{ fontSize: 12, color: TOKENS.inkDim }}>
+                    {t.entryFee}: {p.entryFee}
+                  </span>
+                )}
+                {p.website && (
+                  <a
+                    href={p.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12.5, color: TOKENS.gold, textDecoration: "none", marginTop: 4 }}
+                  >
+                    <Globe size={13} /> {t.visitWebsite}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 export default function BGtoGo() {
+  const [currentPage, setCurrentPage] = useState("home");
   const [selectedRegion, setSelectedRegion] = useState(REGIONS[0].id);
   const [query, setQuery] = useState("");
   const [contact, setContact] = useState({ name: "", email: "", message: "" });
@@ -2261,6 +2794,19 @@ export default function BGtoGo() {
   const filteredStays = region.stays.filter(
     (s) => !q || s.name.toLowerCase().includes(q) || s.description.toLowerCase().includes(q)
   );
+
+  function goHome() {
+    setCurrentPage("home");
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+
+  function goToSection(id) {
+    setCurrentPage("home");
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 
   function submitContact(e) {
     e.preventDefault();
@@ -2326,18 +2872,31 @@ export default function BGtoGo() {
           </span>
         </div>
         <nav style={{ display: "flex", gap: 20, fontSize: 14, color: TOKENS.inkDim }}>
-          <a href="#regions" style={{ color: "inherit", textDecoration: "none" }}>
+          <button onClick={goHome} style={navBtnStyle}>
+            Начало
+          </button>
+          <button onClick={() => goToSection("regions")} style={navBtnStyle}>
             Региони
-          </a>
-          <a href="#pick" style={{ color: "inherit", textDecoration: "none" }}>
+          </button>
+          <button onClick={() => setCurrentPage("cultural")} style={navBtnStyle}>
+            Културен туризъм
+          </button>
+          <button onClick={() => goToSection("pick")} style={navBtnStyle}>
             Препоръка
-          </a>
-          <a href="#contact" style={{ color: "inherit", textDecoration: "none" }}>
+          </button>
+          <button onClick={() => goToSection("contact")} style={navBtnStyle}>
             Контакт
-          </a>
+          </button>
         </nav>
       </header>
 
+      {currentPage === "about" && <AboutPage onBack={goHome} />}
+      {currentPage === "terms" && <TermsPage onBack={goHome} />}
+      {currentPage === "privacy" && <PrivacyPage onBack={goHome} />}
+      {currentPage === "cultural" && <CulturalTourismPage onBack={goHome} />}
+
+      {currentPage === "home" && (
+        <>
       {/* Hero */}
       <section style={{ position: "relative", overflow: "hidden", padding: "clamp(48px,9vw,96px) clamp(16px,4vw,48px) 56px" }}>
         <HeroBackdrop />
@@ -2717,28 +3276,44 @@ export default function BGtoGo() {
           )}
         </div>
       </section>
+        </>
+      )}
 
       <footer
         style={{
           borderTop: `1px solid ${TOKENS.line}`,
           padding: "20px clamp(16px,4vw,48px)",
           display: "flex",
-          flexWrap: "wrap",
-          gap: 12,
-          justifyContent: "space-between",
-          alignItems: "center",
+          flexDirection: "column",
+          gap: 14,
           fontSize: 13,
           color: TOKENS.inkDim,
         }}
       >
-        <span>BG to GO — независим пътеводител, без връзка с трети платформи.</span>
-        <div style={{ display: "flex", gap: 16 }}>
-          <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-            <Mail size={14} /> hello@bgtogo.example
-          </span>
-          <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-            <Phone size={14} /> +359 00 000 000
-          </span>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
+          <button onClick={() => setCurrentPage("about")} style={navBtnStyle}>
+            За нас
+          </button>
+          <button onClick={() => setCurrentPage("terms")} style={navBtnStyle}>
+            Условия на ползване
+          </button>
+          <button onClick={() => setCurrentPage("privacy")} style={navBtnStyle}>
+            Политика за поверителност
+          </button>
+          <button onClick={() => setCurrentPage("cultural")} style={navBtnStyle}>
+            Културен туризъм
+          </button>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "space-between", alignItems: "center" }}>
+          <span>BG to GO — независим пътеводител, без връзка с трети платформи.</span>
+          <div style={{ display: "flex", gap: 16 }}>
+            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <Mail size={14} /> hello@bgtogo.example
+            </span>
+            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <Phone size={14} /> +359 00 000 000
+            </span>
+          </div>
         </div>
       </footer>
     </div>
